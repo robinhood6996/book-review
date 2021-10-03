@@ -1,0 +1,32 @@
+li.footer_link {list-style: none;}
+
+li.footer_link a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.Footer_section h4 {
+    color: #f9b802;
+    margin: 20px;
+}
+
+.education{
+    color: #f9b802;
+}
+
+.footer-area {
+    background: #f8f9fa;
+}
+
+.Footer_section.col-sm {
+    padding: 20px;
+}
+
+li.footer_link {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 5px;
+}
+.footer-header{
+    margin-left: 35px;
+}

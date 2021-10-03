@@ -1,0 +1,70 @@
+/* Hero Area Styles */
+.hero-area {
+    margin: 50px;
+}
+/* Hero Image */
+img.Hero-img {
+    border-radius: 5px;
+}
+/* Future text */
+span.future {
+    font-weight: 200;
+    color: #f9b802;
+}
+/* Hero Heading */
+h1.hero-heading {
+    font-weight: 500;
+    font-size: 55px;
+}
+/* Hero text */
+p.hero-text {
+    font-size: 20px;
+    color: #7c7c7c;
+}
+
+
+/* Course Heading */
+h2.courses-heading {
+    text-align: center;
+    margin-top: 50px;
+    background: #062d6f;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* card styles */
+img.card-img-top {
+    height: 200px;
+}
+
+.card {
+ 
+    margin:10px;
+}
+
+/* Icon */
+svg.svg-inline--fa.fa-star.fa-w-18 {
+    color: #ffbd03;
+}
+
+/* Card text */
+.course-details {
+    display: grid;
+    grid-auto-flow: column;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Buy Button on card */
+button.button.buy-btn {
+    font-weight: 800;
+    color: #f9b802;
+}
+
+/* All course button */
+.btn-div {
+    text-align: center;
+    margin-top: 25px;
+}

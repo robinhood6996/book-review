@@ -1,0 +1,19 @@
+.form{
+    margin:50px
+}
+
+h2.form-heading {
+    text-align: center;
+    color: #ffffff;
+    background: #182276;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-text{
+    margin:50px;
+}
+
+.contact-txt-one {
+    border-right: 2px solid #b9aeae;
+}

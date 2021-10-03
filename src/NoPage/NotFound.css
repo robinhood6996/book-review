@@ -1,0 +1,15 @@
+.nopage-area {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+a.no-page-link {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 30px;
+    border: 1px solid #afafaf;
+    margin: 20px;
+    border-radius: 10px;
+    color: black;
+}
