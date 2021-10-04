@@ -7,6 +7,7 @@ import AllCourse from './AllCourse/AllCourse';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import NoPage from './NoPage/NoPage';
+import Course from './Course/Course'
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route exact path="/course/:id">
+            <Course></Course>
           </Route>
           <Route component={NoPage} />
         </Switch>

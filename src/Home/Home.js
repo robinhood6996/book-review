@@ -5,7 +5,7 @@ import './Home.css';
 import heroImg from '../images/hero-img.jpg';
 import useCourse from '../Hooks/useCourse';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faStar, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
 
 const Home = () => {
@@ -16,8 +16,18 @@ const Home = () => {
     const history = useHistory();
 
     //Function for navigate to all course page by history hook
-    const hadleAllCourse = () => {
+    const handleAllCourse = () => {
         history.push('/all-course');
+    }
+
+    //Single Course
+    const handleCourse = id => {
+        history.push(`/course/${id}`)
+    }
+
+    //Learn more button navigate to about us page
+    const handleLearnBtn = () => {
+        history.push('/about')
     }
     //return ui
     return (
@@ -28,7 +38,7 @@ const Home = () => {
                         <h1><span className="future">FUTURE OF</span></h1>
                         <h1 className="hero-heading"> Online Education</h1>
                         <p className="hero-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta non molestiae consequatur quod aperiam commodi veniam sunt doloribus, iste repellat, natus facilis possimus iusto nostrum quasi cumque maiores porro vero.</p>
-                        <Button className="button">Learn More</Button>
+                        <Button className="button" onClick={handleLearnBtn}>Learn More <FontAwesomeIcon icon={faArrowRight} /></Button>
                     </Col>
                     <Col md='6' className="hero-img-area">
                         <img className="Hero-img" src={heroImg} width="600px" alt="" />
@@ -51,16 +61,16 @@ const Home = () => {
                                         <p> {course.desc.slice(0, 130)}</p>
                                         <div className="course-details">
                                             <p> <FontAwesomeIcon icon={faStar} /> {course.rating}</p>
-                                            <p>Learners: {course.student}</p>
+                                            <p><FontAwesomeIcon icon={faUsers} /> {course.student}</p>
                                         </div>
-                                        <Button className="button buy-btn">Enroll Now At: ${course.price}</Button>
+                                        <Button className="button buy-btn" onClick={() => handleCourse(course.id)}>Enroll Now At: ${course.price}</Button>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>)
                     }
                     <div className="btn-div">
-                        <Button className="button course-btn" onClick={hadleAllCourse}>View All Courses</Button>
+                        <Button className="button course-btn" onClick={handleAllCourse}>View All Courses</Button>
                     </div>
                 </Row>
             </Container>

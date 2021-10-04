@@ -1,14 +1,20 @@
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import useCourse from '../Hooks/useCourse';
 import './AllCourse.css'
 const AllCourse = () => {
 
     const [courses] = useCourse();
+    const history = useHistory();
 
+    //Single Course
+    const handleCourse = id => {
+        history.push(`/course/${id}`)
+    }
 
     return (
         <div>
@@ -25,9 +31,9 @@ const AllCourse = () => {
                                         <p> {course.desc.slice(0, 130)}</p>
                                         <div className="course-details">
                                             <p> <FontAwesomeIcon icon={faStar} /> {course.rating}</p>
-                                            <p>Learners: {course.student}</p>
+                                            <p><FontAwesomeIcon icon={faUsers} /> {course.student}</p>
                                         </div>
-                                        <Button className="button buy-btn">Enroll Now At: ${course.price}</Button>
+                                        <Button className="button buy-btn" onClick={() => handleCourse(course.id)}>Enroll Now At: ${course.price}</Button>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
