@@ -1,6 +1,6 @@
 # PDEMY | A Learning Website
 
-# Github link : https://github.com/ProgrammingHeroWC4/review-website-robinhood6996.git
+# Github link : https://github.com/robinhood6996/book-review
 # Live Link:  https://pdemy.netlify.app/
 
  - This website is about online course selling site
